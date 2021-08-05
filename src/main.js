@@ -19,7 +19,7 @@ router.all("*", async (request) => {
         } else if (text.includes("id")) {
             await send({ id: body.message.chat.id, text: `你的訊息通道 ID 是 ${body.message.chat.id}` });
         } else if (text.includes("automia")) {
-            await send({ id: body.message.chat.id, text: "Automia! _Automia!_ *Automia!*" });
+            await send({ id: body.message.chat.id, text: "Automia\\! _Automia\\!_ *Automia\\!*" });
         } else {
             await send({ id: body.message.chat.id, text: body.message.text.split("").reverse().join("") });
         }
